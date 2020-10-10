@@ -5,6 +5,7 @@ import aiohttp
 
 from bs4 import BeautifulSoup
 
+
 async def fetch_content(url):
 
     header = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"}
@@ -13,6 +14,7 @@ async def fetch_content(url):
     ) as session:
         async with session.get(url) as response:
             return await response.text()
+
 
 async def run():
     url = "https://movie.douban.com/cinema/later/beijing/"
